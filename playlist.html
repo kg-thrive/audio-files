@@ -8,9 +8,6 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
-      min-height: 100%;
-      height: auto;
-      overflow: visible !important;
     }
 
     #playAll {
@@ -55,11 +52,23 @@
       background: #4285f4;
       color: white;
     }
+
+    /* Try to prevent Google Sites from creating
+   an independently scrolling mobile container */
+    html,
+    body {
+      overflow: visible !important;
+    }
+  
+    .forceIosScrolling {
+      overflow: visible !important;
+      -webkit-overflow-scrolling: auto !important;
+    }
   </style>
 </head>
 
 <body>
-  <h2>Audio Playlist 2</h2>
+  <h2>Audio Playlist 3</h2>
   <button id="playAll">▶ Play All</button>
   <audio id="player" controls></audio>
   <ul id="playlist">
