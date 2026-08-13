@@ -3,21 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Audio Playlist</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
+      margin: 8px;
       padding: 0;
-      min-height: 1200px;
-      background: #ffeeee;
+      background: white;
     }
 
     #playAll {
       font-family: Arial, sans-serif;
-      font-size: 16px;
-      padding: 10px 18px;
-      margin-bottom: 15px;
+      font-size: 15px;
+      padding: 7px 14px;
+      margin: 0 0 8px 0;
       background: #4285f4;
       color: white;
       border: none;
@@ -30,21 +30,25 @@
     }
 
     audio {
+      display: block;
       width: 100%;
-      margin-bottom: 15px;
+      margin: 0 0 8px 0;
     }
 
     #playlist {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     #playlist li {
-      padding: 10px;
-      margin: 4px 0;
+      padding: 6px 8px;
+      margin: 2px 0;
       background: #f0f0f0;
       cursor: pointer;
-      border-radius: 4px;
+      border-radius: 3px;
+      font-size: 15px;
+      line-height: 1.2;
     }
 
     #playlist li:hover {
@@ -55,14 +59,12 @@
       background: #4285f4;
       color: white;
     }
-
   </style>
 </head>
 
 <body>
-  <h2>Audio Playlist</h2>
   <button id="playAll">▶ Play All</button>
-  <audio id="player" controls></audio>
+  <audio id="player" controls preload="metadata"></audio>
   <ul id="playlist">
     <li data-src="01 One Brave Step (one long song).mp3"> 01 One Brave Step (one
       long song) </li>
@@ -78,17 +80,18 @@
     const tracks = Array.from(document.querySelectorAll("#playlist li"));
     const playAllButton = document.getElementById("playAll");
     let currentTrack = 0;
-    // True only when Play All has been activated.
     let playAll = false;
-
+    // Play a particular track.
     function playTrack(index) {
       currentTrack = index;
       player.src = tracks[index].dataset.src;
-      tracks.forEach(track => track.classList.remove("active"));
+      tracks.forEach(track => {
+        track.classList.remove("active");
+      });
       tracks[index].classList.add("active");
       player.play();
     }
-    // PLAY ALL BUTTON
+    // Play All button.
     playAllButton.addEventListener("click", function() {
       if (playAll) {
         // Stop Play All mode.
@@ -96,33 +99,35 @@
         player.pause();
         playAllButton.textContent = "▶ Play All";
       } else {
-        // Start Play All mode from Song 1.
+        // Start from Song 1.
         playAll = true;
         playAllButton.textContent = "■ Stop All";
         playTrack(0);
       }
     });
-    // When a song ends, automatically play the next song
-    // only when Play All mode is active.
+    // Automatically play the next track when the
+    // current track finishes.
     player.addEventListener("ended", function() {
-      if (playAll && currentTrack < tracks.length - 1) {
-        playTrack(currentTrack + 1);
-      } else if (playAll && currentTrack === tracks.length - 1) {
-        // Last song has finished.
-        playAll = false;
-        playAllButton.textContent = "▶ Play All";
+      if (playAll) {
+        if (currentTrack < tracks.length - 1) {
+          playTrack(currentTrack + 1);
+        } else {
+          // Last song has finished.
+          playAll = false;
+          playAllButton.textContent = "▶ Play All";
+        }
       }
     });
     // Allow the user to select an individual song.
     tracks.forEach((track, index) => {
       track.addEventListener("click", function() {
-        // Selecting an individual song cancels Play All mode.
+        // Selecting a song manually exits Play All mode.
         playAll = false;
         playAllButton.textContent = "▶ Play All";
         playTrack(index);
       });
     });
-    // Load the first track without automatically playing it.
+    // Load Song 1 without playing it.
     player.src = tracks[0].dataset.src;
     tracks[0].classList.add("active");
   </script>
