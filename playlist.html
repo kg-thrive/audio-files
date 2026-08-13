@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Playlist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    #playlist {
+      list-style: none;
+      padding: 0;
+    }
+
+    #playlist li {
+      padding: 10px;
+      margin: 4px 0;
+      background: #f0f0f0;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #playlist li:hover {
+      background: #ddd;
+    }
+
+    #playlist li.active {
+      background: #4285f4;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Audio Playlist</h2>
+  <audio id="player" controls></audio>
+  <ul id="playlist">
+    <li
+      data-src="01 One Brave Step (one long song).mp3">
+      01 One Brave Step (one long song).mp3 </li>
+    <li
+      data-src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/audio-files/TRACK2.mp3">
+      Track 2 </li>
+    <li
+      data-src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/audio-files/TRACK3.mp3">
+      Track 3 </li>
+    <li
+      data-src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/audio-files/TRACK4.mp3">
+      Track 4 </li>
+    <li
+      data-src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/audio-files/TRACK5.mp3">
+      Track 5 </li>
+    <li
+      data-src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/audio-files/TRACK6.mp3">
+      Track 6 </li>
+    <li
+      data-src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPOSITORY/main/audio-files/TRACK7.mp3">
+      Track 7 </li>
+  </ul>
+  <script>
+    const player = document.getElementById("player");
+    const tracks = Array.from(document.querySelectorAll("#playlist li"));
+    let currentTrack = 0;
+
+    function playTrack(index) {
+      currentTrack = index;
+      player.src = tracks[index].dataset.src;
+      tracks.forEach(track => track.classList.remove("active"));
+      tracks[index].classList.add("active");
+      player.play();
+    }
+    // Automatically play the next track when the current one ends.
+    player.addEventListener("ended", function() {
+      if (currentTrack < tracks.length - 1) {
+        playTrack(currentTrack + 1);
+      }
+    });
+    // Allow the user to select any track.
+    tracks.forEach((track, index) => {
+      track.addEventListener("click", function() {
+        playTrack(index);
+      });
+    });
+    // Load the first track without automatically starting it.
+    player.src = tracks[0].dataset.src;
+    tracks[0].classList.add("active");
+  </script>
+</body>
+
+</html>
