@@ -1,155 +1,187 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audio Playlist</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0 10px;
-      padding: 0;
-      background: white;
-    }
-    
-    /* Play All button */
-    #playAll {
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      font-weight: bold;
-      min-height: 48px;
-      padding: 10px 18px;
-      margin: 0 0 12px 0;
-      background: #1E6C93;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    #playAll:hover {
-      background: #3367d6;
-    }
-    
-    /* Audio player */
-    audio {
-      display: block;
-      width: 100%;
-      min-height: 48px;
-      margin: 0 0 12px 0;
-    }
-    
-    /* Playlist */
-    #playlist {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    /* Individual song - large touch target */
-    #playlist li {
-      min-height: 44px;
-      box-sizing: border-box;
-      display: flex;
-      align-items: center;
-    
-      padding: 10px 12px;
-      margin: 4px 0;
-    
-      background: #f0f0f0;
-      cursor: pointer;
-      border-radius: 5px;
-    
-      font-size: 16px;
-      line-height: 1.3;
-    }
-    
-    /* Mouse hover */
-    #playlist li:hover {
-      background: #ddd;
-    }
-    
-    /* Currently playing */
-    #playlist li.active {
-      background: #1E6C93;
-      color: white;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-<body>
-  <button id="playAll">▶ Play All</button>
-  <audio id="player" controls preload="metadata"></audio>
-  <ul id="playlist">
-    <li data-src="A Common Thread.mp3"> A Common Thread </li>
-    <li data-src="Same Old Bench.mp3"> Same Old Bench </li>
-    <li data-src="See You Tomorrow.mp3"> See You Tomorrow </li>
-    <li data-src="A Place to Rest.mp3"> A Place to Rest </li>
-    <li data-src="Let the moment be.mp3"> Let the Moment Be </li>
-    <li data-src="Constellations.mp3"> Constellations </li>
-    <li data-src="Just The View.mp3"> Just The View </li>
-    <li data-src="The Invisible Man.mp3"> The Invisible Man </li>
-    <li data-src="One Brave Step (one long song).mp3"> One Brave Step (one
-      long song) </li>
-  </ul>
-  <script>
-    const player = document.getElementById("player");
-    const tracks = Array.from(document.querySelectorAll("#playlist li"));
-    const playAllButton = document.getElementById("playAll");
-    let currentTrack = 0;
-    let playAll = false;
-    // Play a particular track.
-    function playTrack(index) {
-      currentTrack = index;
-      player.src = tracks[index].dataset.src;
-      tracks.forEach(track => {
-        track.classList.remove("active");
-      });
-      tracks[index].classList.add("active");
-      player.play();
-    }
-    // Play All button.
-    playAllButton.addEventListener("click", function() {
-      if (playAll) {
-        // Stop Play All mode.
-        playAll = false;
-        player.pause();
-        playAllButton.textContent = "▶ Play All";
-      } else {
-        // Start from Song 1.
-        playAll = true;
-        playAllButton.textContent = "■ Stop All";
-        playTrack(0);
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Playlist</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0 10px;
+        padding: 0;
+        background: white;
       }
-    });
-    // Automatically play the next track when the
-    // current track finishes.
-    player.addEventListener("ended", function() {
-      if (playAll) {
-        if (currentTrack < tracks.length - 1) {
-          playTrack(currentTrack + 1);
-        } else {
-          // Last song has finished.
-          playAll = false;
-          playAllButton.textContent = "▶ Play All";
+
+      /* Responsive layout */
+      .content {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+      }
+
+      .playlist-section {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .about-section {
+        flex: 1;
+        min-width: 0;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* Stack on smaller screens */
+      @media (max-width: 700px) {
+        .content {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .playlist-section,
+        .about-section {
+          width: 100%;
         }
       }
-    });
-    // Allow the user to select an individual song.
-    tracks.forEach((track, index) => {
-      track.addEventListener("click", function() {
-        // Selecting a song manually exits Play All mode.
-        playAll = false;
-        playAllButton.textContent = "▶ Play All";
-        playTrack(index);
-      });
-    });
-    // Load Song 1 without playing it.
-    player.src = tracks[0].dataset.src;
-    tracks[0].classList.add("active");
-  </script>
-</body>
 
+      /* Play All button */
+      #playAll {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        min-height: 48px;
+        padding: 10px 18px;
+        margin: 0 0 12px 0;
+        background: #1E6C93;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      #playAll:hover {
+        background: #3367d6;
+      }
+
+      /* Audio player */
+      audio {
+        display: block;
+        width: 100%;
+        min-height: 48px;
+        margin: 0 0 12px 0;
+      }
+
+      /* Playlist */
+      #playlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Individual song - large touch target */
+      #playlist li {
+        min-height: 44px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        margin: 4px 0;
+        background: #f0f0f0;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 1.3;
+      }
+
+      /* Mouse hover */
+      #playlist li:hover {
+        background: #ddd;
+      }
+
+      /* Currently playing */
+      #playlist li.active {
+        background: #1E6C93;
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="playlist-section">
+        <button id="playAll">▶ Play All</button>
+        <audio id="player" controls preload="metadata"></audio>
+        <ul id="playlist">
+          <li data-src="A Common Thread.mp3">A Common Thread</li>
+          <li data-src="Same Old Bench.mp3">Same Old Bench</li>
+          <li data-src="See You Tomorrow.mp3">See You Tomorrow</li>
+          <li data-src="A Place to Rest.mp3">A Place to Rest</li>
+          <li data-src="Let the Moment Be.mp3">Let the Moment Be</li>
+          <li data-src="Constellations.mp3">Constellations</li>
+          <li data-src="Just The View.mp3">Just The View</li>
+          <li data-src="The Invisible Man.mp3">The Invisible Man</li>
+          <li data-src="One Brave Step (one long song).mp3">One Brave Step (one long song)</li>
+        </ul>
+      </div>
+      <div class="about-section">
+        <p> Hi, I’m Kevin — a simple guy with a simple goal: to create one nice song. Simple, right? </p>
+        <p> I’ve been experimenting with AI tools to help bring my lyrics and ideas to life. Of course, “nice” is in the ear of the beholder. </p>
+        <p> These are demo versions, but I hope you find something here that leans toward nice. </p>
+      </div>
+    </div>
+    <script>
+      const player = document.getElementById("player");
+      const tracks = Array.from(document.querySelectorAll("#playlist li"));
+      const playAllButton = document.getElementById("playAll");
+      let currentTrack = 0;
+      let playAll = false;
+      // Play a particular track.
+      function playTrack(index) {
+        currentTrack = index;
+        player.src = tracks[index].dataset.src;
+        tracks.forEach(track => {
+          track.classList.remove("active");
+        });
+        tracks[index].classList.add("active");
+        player.play();
+      }
+      // Play All button.
+      playAllButton.addEventListener("click", function() {
+        if (playAll) {
+          // Stop Play All mode.
+          playAll = false;
+          player.pause();
+          playAllButton.textContent = "▶ Play All";
+        } else {
+          // Start from Song 1.
+          playAll = true;
+          playAllButton.textContent = "■ Stop All";
+          playTrack(0);
+        }
+      });
+      // Automatically play next track.
+      player.addEventListener("ended", function() {
+        if (playAll) {
+          if (currentTrack < tracks.length - 1) {
+            playTrack(currentTrack + 1);
+          } else {
+            playAll = false;
+            playAllButton.textContent = "▶ Play All";
+          }
+        }
+      });
+      // Allow selecting individual songs.
+      tracks.forEach((track, index) => {
+        track.addEventListener("click", function() {
+          // Selecting a song manually exits Play All mode.
+          playAll = false;
+          playAllButton.textContent = "▶ Play All";
+          playTrack(index);
+        });
+      });
+      // Load Song 1 without playing it.
+      player.src = tracks[0].dataset.src;
+      tracks[0].classList.add("active");
+    </script>
+  </body>
 </html>
