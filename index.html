@@ -1,83 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin's Songs</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: white;
+        color: #222;
+      }
 
-  <title>Audio Recordings</title>
+      .container {
+        max-width: 1100px;
+        margin: auto;
+      }
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      color: #222;
-    }
+      /* Top section */
+      .top-section {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+      }
 
-    .audio-item {
-      margin-bottom: 25px;
-    }
+      /* Playlist */
+      .playlist-section {
+        flex: 1;
+      }
 
-    .audio-title {
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
+      /* Intro */
+      .intro-section {
+        flex: 1;
+        font-size: 17px;
+        line-height: 1.6;
+      }
 
-    audio {
-      width: 100%;
-    }
-  </style>
-</head>
+      /* Play All button */
+      #playAll {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        min-height: 48px;
+        padding: 10px 18px;
+        margin-bottom: 12px;
+        background: #1E6C93;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
 
-<body>
+      #playAll:hover {
+        background: #15506d;
+      }
 
-  <div class="audio-item">
-    <div class="audio-title">01 One Brave Step (one long song)</div>
-    <audio controls preload="metadata">
-      <source src="01 One Brave Step (one long song).mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      /* Audio player */
+      audio {
+        display: block;
+        width: 100%;
+        min-height: 48px;
+        margin-bottom: 12px;
+      }
 
-  <div class="audio-item">
-    <div class="audio-title">02 Same Old Bench</div>
-    <audio controls preload="metadata">
-      <source src="02 Same Old Bench.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      /* Playlist */
+      #playlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-  <div class="audio-item">
-    <div class="audio-title">03 Let the moment be</div>
-    <audio controls preload="metadata">
-      <source src="03 Let the moment be.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      #playlist li {
+        min-height: 44px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
+        margin: 4px 0;
+        background: #f0f0f0;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 1.3;
+      }
 
-  <div class="audio-item">
-    <div class="audio-title">04 Just The View</div>
-    <audio controls preload="metadata">
-      <source src="04 Just The View.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      #playlist li:hover {
+        background: #ddd;
+      }
 
-  <div class="audio-item">
-    <div class="audio-title">05 The Invisible Man</div>
-    <audio controls preload="metadata">
-      <source src="05 The Invisible Man.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      #playlist li.active {
+        background: #1E6C93;
+        color: white;
+        font-weight: bold;
+      }
 
-  <div class="audio-item">
-    <div class="audio-title">06 Constellations</div>
-    <audio controls preload="metadata">
-      <source src="06 Constellations.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      /* Feedback button */
+      .feedback {
+        text-align: center;
+        margin: 40px 0;
+      }
 
-  <div class="audio-item">
-    <div class="audio-title">07 See You Tomorrow</div>
-    <audio controls preload="metadata">
-      <source src="07 See You Tomorrow.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      .feedback a {
+        display: inline-block;
+        background: #1E6C93;
+        color: white;
+        padding: 14px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
 
-</body>
+      .feedback a:hover {
+        background: #15506d;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid #ddd;
+        margin-top: 40px;
+        padding-top: 20px;
+        font-size: 13px;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      /* Mobile layout */
+      @media (max-width: 750px) {
+        body {
+          padding: 15px;
+        }
+
+        .top-section {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        /*
+     Playlist first on mobile
+     Intro second
+  */
+        .playlist-section {
+          order: 1;
+        }
+
+        .intro-section {
+          order: 2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-section">
+        <!-- Playlist -->
+        <div class="playlist-section">
+          <button id="playAll"> ▶ Play All </button>
+          <audio id="player" controls preload="metadata"></audio>
+          <ul id="playlist">
+            <li data-src="A Common Thread.mp3"> A Common Thread </li>
+            <li data-src="Same Old Bench.mp3"> Same Old Bench </li>
+            <li data-src="See You Tomorrow.mp3"> See You Tomorrow </li>
+            <li data-src="A Place to Rest.mp3"> A Place to Rest </li>
+            <li data-src="Let the Moment Be.mp3"> Let the Moment Be </li>
+            <li data-src="Constellations.mp3"> Constellations </li>
+            <li data-src="Just The View.mp3"> Just The View </li>
+            <li data-src="The Invisible Man.mp3"> The Invisible Man </li>
+            <li data-src="One Brave Step (one long song).mp3"> One Brave Step (one long song) </li>
+          </ul>
+        </div>
+        <!-- Intro -->
+        <div class="intro-section">
+          <p> Hi, I’m Kevin - a simple guy with a simple goal: to create one nice song. Simple, right? </p>
+          <p> I’ve been experimenting with AI tools to help bring my lyrics and ideas to life. Of course, “nice” is in the ear of the beholder. These are demo versions, but I hope you find something here that leans toward nice. </p>
+          <p> My hope is to someday record some of these songs with real musicians. If you have ideas, suggestions, or connections that might help point me in that direction, I’d love to hear them. Send feedback and include contact info if you’d like a response. Thanks for listening! </p>
+        </div>
+      </div>
+      <!-- Feedback -->
+      <div class="feedback">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQPFNEyRsNHloSERvHQJ7VVRsrywVqGEntRODbwjyr15PSPg/viewform?usp=sharing&ouid=118421177423871815350" target="_blank"> Send Feedback </a>
+      </div>
+      <footer>
+        <p> © 2026 <a href="https://music.creativitybug.com" music.creativitybug.com </a>> All rights reserved. Original songs and lyrics. Music production created with AI assistance. Visitors are welcome to stream and enjoy (hopefully!) this music for personal use. You may not re-upload, distribute, or claim these songs, lyrics, or audio files as your own work. Feel free to share the link to this webpage! AI data scraping or training on this content is prohibited. 
+ </p>
+      </footer>
+    </div>
+    <script>
+      const player = document.getElementById("player");
+      const tracks = Array.from(document.querySelectorAll("#playlist li"));
+      const playAllButton = document.getElementById("playAll");
+      let currentTrack = 0;
+      let playAll = false;
+
+      function playTrack(index) {
+        currentTrack = index;
+        player.src = tracks[index].dataset.src;
+        tracks.forEach(track => {
+          track.classList.remove("active");
+        });
+        tracks[index].classList.add("active");
+        player.play();
+      }
+      playAllButton.addEventListener("click", function() {
+        if (playAll) {
+          playAll = false;
+          player.pause();
+          playAllButton.textContent = "▶ Play All";
+        } else {
+          playAll = true;
+          playAllButton.textContent = "■ Stop All";
+          playTrack(0);
+        }
+      });
+      player.addEventListener("ended", function() {
+        if (playAll) {
+          if (currentTrack < tracks.length - 1) {
+            playTrack(currentTrack + 1);
+          } else {
+            playAll = false;
+            playAllButton.textContent = "▶ Play All";
+          }
+        }
+      });
+      tracks.forEach((track, index) => {
+        track.addEventListener("click", function() {
+          playAll = false;
+          playAllButton.textContent = "▶ Play All";
+          playTrack(index);
+        });
+      });
+      player.src = tracks[0].dataset.src;
+      tracks[0].classList.add("active");
+    </script>
+  </body>
 </html>
