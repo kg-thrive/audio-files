@@ -233,12 +233,27 @@
 	}
 	
 	.info-button {
-		margin-left: auto;
-		border: none;
-		background: transparent;
-		font-size: 20px;
-		cursor: pointer;
-	}
+		  width: 28px;
+		  height: 28px;
+		  margin-left: auto;
+		
+		  border-radius: 50%;
+		  border: 2px solid #1E6C93;
+		  background: white;
+		  color: #1E6C93;
+		
+		  font-size: 18px;
+		  font-weight: bold;
+		  line-height: 20px;
+		
+		  cursor: pointer;
+		  flex-shrink: 0;
+		}
+		
+		.info-button:hover {
+		  background: #1E6C93;
+		  color: white;
+		}
 	
 	.song-title {
 		flex: 1;
@@ -258,8 +273,9 @@
 				<button id="playAll"> ▶ Play All </button>
 				<audio id="player" controls preload="metadata"></audio>
 				<ul id="playlist">
-					<li data-src="Sailing Through.mp3"> <span class="song-title">Sailing Through</span>
-						<button class="info-button" data-song="sailing-through">ⓘ</button>
+					<li data-src="Sailing Through.mp3">
+						<span class="song-title">Sailing Through</span>
+						<button class="info-button" data-song="sailing-through">i</button>
 					</li>
 					<li data-src="A Common Thread.mp3"> Each Life a Thread </li>
 					<li data-src="Same Old Bench.mp3"> Same Old Bench </li>
