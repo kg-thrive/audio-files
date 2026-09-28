@@ -428,6 +428,8 @@
 			modalTitle.textContent = songData[song].title;
 			modalIntent.textContent = songData[song].intent;
 			modalLyrics.innerHTML = songData[song].lyrics.replace(/\n/g, "<br>");
+			// Reset the scroll position to the very top
+    		modal.scrollTop = 0;
 			modal.style.display = "block";
 		});
 	});
