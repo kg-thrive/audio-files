@@ -1,289 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warning: May Contain Traces of Music</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-transparent.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32-transparent.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16-transparent.png">
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-        background: white;
-        color: #222;
-      }
 
-      .container {
-        max-width: 1100px;
-        margin: auto;
-      }
-
-      .site-header {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      
-      .warning-icon {
-        width: 48px;
-        height: 48px;
-        vertical-align: middle;
-        margin-bottom: 8px;
-      }
-      
-      .site-header h1 {
-        margin: 5px 0;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      h2 { 
-        font-size: 18px;
-        margin-bottom: 6px;
-      }
-
-      p {
-        margin-top: 0;
-      }
-      
-      .tagline {
-        margin: 8px 0 0 0;
-        font-size: 18px;
-        color: #555;
-      }
-
-      @media (max-width: 750px) { 
-        .warning-icon { width: 40px; height: 40px; } 
-        .site-header h1 { font-size: 16px; } 
-        h2 { font-size: 14px; }
-      }
-
-      /* Top section */
-      .top-section {
-        display: flex;
-        gap: 40px;
-        align-items: flex-start;
-      }
-
-      /* Playlist */
-      .playlist-section {
-        flex: 1;
-      }
-
-      /* Intro */
-      .intro-section {
-        flex: 1;
-        font-size: 17px;
-        line-height: 1.6;
-      }
-
-      /* Play All button */
-      #playAll {
-        font-family: Arial, sans-serif;
-        font-size: 18px;
-        font-weight: bold;
-        min-height: 48px;
-        padding: 10px 18px;
-        margin-bottom: 12px;
-        background: #1E6C93;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-      }
-
-      #playAll:hover {
-        background: #15506d;
-      }
-
-      /* Audio player */
-      audio {
-        display: block;
-        width: 100%;
-        min-height: 48px;
-        margin-bottom: 12px;
-      }
-
-      /* Playlist */
-      #playlist {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      #playlist li {
-        min-height: 44px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        padding: 10px 12px;
-        margin: 4px 0;
-        background: #f0f0f0;
-        cursor: pointer;
-        border-radius: 5px;
-        font-size: 16px;
-        line-height: 1.3;
-      }
-
-      #playlist li:hover {
-        background: #ddd;
-      }
-
-      #playlist li.active {
-        background: #1E6C93;
-        color: white;
-        font-weight: bold;
-      }
-
-      /* Feedback button */
-      .feedback {
-        text-align: center;
-        margin: 40px 0;
-      }
-
-      .feedback a {
-        display: inline-block;
-        background: #1E6C93;
-        color: white;
-        padding: 14px 24px;
-        border-radius: 6px;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-      }
-
-      .feedback a:hover {
-        background: #15506d;
-      }
-
-      /* Footer */
-      footer {
-        border-top: 1px solid #ddd;
-        margin-top: 40px;
-        padding-top: 20px;
-        font-size: 13px;
-        color: #666;
-        line-height: 1.5;
-      }
-
-      /* Mobile layout */
-      @media (max-width: 750px) {
-        body {
-          padding: 15px;
-        }
-
-        .top-section {
-          flex-direction: column;
-          gap: 20px;
-        }
-
-        /*
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Warning: May Contain Traces of Music</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-transparent.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32-transparent.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16-transparent.png">
+	<style>
+	body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 20px;
+		background: white;
+		color: #222;
+	}
+	
+	.container {
+		max-width: 1100px;
+		margin: auto;
+	}
+	
+	.site-header {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	
+	.warning-icon {
+		width: 48px;
+		height: 48px;
+		vertical-align: middle;
+		margin-bottom: 8px;
+	}
+	
+	.site-header h1 {
+		margin: 5px 0;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	
+	h2 {
+		font-size: 18px;
+		margin-bottom: 6px;
+	}
+	
+	p {
+		margin-top: 0;
+	}
+	
+	.tagline {
+		margin: 8px 0 0 0;
+		font-size: 18px;
+		color: #555;
+	}
+	
+	@media (max-width: 750px) {
+		.warning-icon {
+			width: 40px;
+			height: 40px;
+		}
+		.site-header h1 {
+			font-size: 16px;
+		}
+		h2 {
+			font-size: 14px;
+		}
+	}
+	/* Top section */
+	
+	.top-section {
+		display: flex;
+		gap: 40px;
+		align-items: flex-start;
+	}
+	/* Playlist */
+	
+	.playlist-section {
+		flex: 1;
+	}
+	/* Intro */
+	
+	.intro-section {
+		flex: 1;
+		font-size: 17px;
+		line-height: 1.6;
+	}
+	/* Play All button */
+	
+	#playAll {
+		font-family: Arial, sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		min-height: 48px;
+		padding: 10px 18px;
+		margin-bottom: 12px;
+		background: #1E6C93;
+		color: white;
+		border: none;
+		border-radius: 6px;
+		cursor: pointer;
+	}
+	
+	#playAll:hover {
+		background: #15506d;
+	}
+	/* Audio player */
+	
+	audio {
+		display: block;
+		width: 100%;
+		min-height: 48px;
+		margin-bottom: 12px;
+	}
+	/* Playlist */
+	
+	#playlist {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	#playlist li {
+		min-height: 44px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		padding: 10px 12px;
+		margin: 4px 0;
+		background: #f0f0f0;
+		cursor: pointer;
+		border-radius: 5px;
+		font-size: 16px;
+		line-height: 1.3;
+	}
+	
+	#playlist li:hover {
+		background: #ddd;
+	}
+	
+	#playlist li.active {
+		background: #1E6C93;
+		color: white;
+		font-weight: bold;
+	}
+	/* Feedback button */
+	
+	.feedback {
+		text-align: center;
+		margin: 40px 0;
+	}
+	
+	.feedback a {
+		display: inline-block;
+		background: #1E6C93;
+		color: white;
+		padding: 14px 24px;
+		border-radius: 6px;
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	
+	.feedback a:hover {
+		background: #15506d;
+	}
+	/* Footer */
+	
+	footer {
+		border-top: 1px solid #ddd;
+		margin-top: 40px;
+		padding-top: 20px;
+		font-size: 13px;
+		color: #666;
+		line-height: 1.5;
+	}
+	/* Mobile layout */
+	
+	@media (max-width: 750px) {
+		body {
+			padding: 15px;
+		}
+		.top-section {
+			flex-direction: column;
+			gap: 20px;
+		}
+		/*
      Playlist first on mobile
      Intro second
   */
-        .playlist-section {
-          order: 1;
-          width: 100%;
-        }
+		.playlist-section {
+			order: 1;
+			width: 100%;
+		}
+		.intro-section {
+			order: 2;
+		}
+	}
+	/* Song information modal */
+	
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		overflow-y: auto;
+	}
+	
+	.modal-content {
+		background: white;
+		margin: 10% auto;
+		padding: 25px;
+		width: 85%;
+		max-width: 700px;
+		border-radius: 8px;
+		line-height: 1.5;
+		position: relative;
+	}
+	
+	.close-modal {
+		position: absolute;
+		right: 15px;
+		top: 10px;
+		font-size: 28px;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+	
+	.info-button {
+		margin-left: auto;
+		border: none;
+		background: transparent;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	
+	.song-title {
+		flex: 1;
+	}
+	</style>
+</head>
 
-        .intro-section {
-          order: 2;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="site-header">
-        <img src="favicon-32x32-transparent.png" alt="Warning music icon" class="warning-icon">
-        <h1>Warning: May Contain Traces of Music</h1>
-        <p class="tagline"> A little songwriting experiment by Kevin </p>
-      </div>
-      <div class="top-section">
-        <!-- Playlist -->
-        <div class="playlist-section">
-          <button id="playAll"> ▶ Play All </button>
-          <audio id="player" controls preload="metadata"></audio>
-          <ul id="playlist">
-            <li data-src="Sailing Through.mp3"> Sailing Through </li>
-            <li data-src="A Common Thread.mp3"> Each Life a Thread </li>
-            <li data-src="Same Old Bench.mp3"> Same Old Bench </li>
-            <li data-src="See You Tomorrow.mp3"> See You Tomorrow </li>
-            <li data-src="A Place to Rest.mp3"> A Place to Rest </li>
-            <li data-src="The Music Box.mp3"> The Music Box </li>
-            <li data-src="Let the moment be.mp3"> Let the Moment Be </li>
-            <li data-src="Constellations.mp3"> Constellations </li>
-            <li data-src="Just The View.mp3"> Just The View </li>
-            <li data-src="The Invisible Man.mp3"> The Invisible Man </li>
-            <li data-src="One Brave Step (one long song).mp3"> One Brave Step (one long song) </li>
-          </ul>
-        </div>
-        <!-- Intro -->
-        <div class="intro-section">
-          <h2> One Nice Song </h2>
-          <p> Hi, I’m Kevin - a simple guy with a simple goal: to create one nice song. Simple, right? Of course, “nice” is in the ear of the beholder. These are demo versions, but I hope you find something here that leans toward nice. I’d enjoy hearing your thoughts. <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQPFNEyRsNHloSERvHQJ7VVRsrywVqGEntRODbwjyr15PSPg/viewform?usp=sharing&ouid=118421177423871815350" target="_blank"> Tell me what you think </a> </p>
-          <h2> That Human Touch </h2>
-          <p> I’ve been experimenting with AI tools to help bring my lyrics and ideas to life. My hope is to someday record some of these songs with real musicians. If you have ideas or suggestions, I’d love to hear them. <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQPFNEyRsNHloSERvHQJ7VVRsrywVqGEntRODbwjyr15PSPg/viewform?usp=sharing&ouid=118421177423871815350" target="_blank"> Send a note </a> and include contact info if you’d like a response. </p>
-          <p> Thanks for listening! </p>
-        </div>
-      </div>
-      <!-- Feedback -->
-      <div class="feedback">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQPFNEyRsNHloSERvHQJ7VVRsrywVqGEntRODbwjyr15PSPg/viewform?usp=sharing&ouid=118421177423871815350" target="_blank"> Send Feedback </a>
-      </div>
-      <footer>
-        <p> © 2026 <a href="https://music.creativitybug.com"> music.creativitybug.com </a> All rights reserved. Original songs and lyrics. Music production created with AI assistance. Visitors are welcome to stream and enjoy (hopefully!) this music for personal use. You may not re-upload, distribute, or claim these songs, lyrics, or audio files as your own work. Feel free to share the link to this webpage! AI data scraping or training on this content is prohibited. 
- </p>
-      </footer>
-    </div>
-    <script>
-      const player = document.getElementById("player");
-      const tracks = Array.from(document.querySelectorAll("#playlist li"));
-      const playAllButton = document.getElementById("playAll");
-      let currentTrack = 0;
-      let playAll = false;
+<body>
+	<div class="container">
+		<div class="site-header"> <img src="favicon-32x32-transparent.png" alt="Warning music icon" class="warning-icon">
+			<h1>Warning: May Contain Traces of Music</h1>
+			<p class="tagline"> A little songwriting experiment by Kevin </p>
+		</div>
+		<div class="top-section">
+			<!-- Playlist -->
+			<div class="playlist-section">
+				<button id="playAll"> ▶ Play All </button>
+				<audio id="player" controls preload="metadata"></audio>
+				<ul id="playlist">
+					<li data-src="Sailing Through.mp3"> <span class="song-title">Sailing Through</span>
+						<button class="info-button" data-song="sailing-through">ⓘ</button>
+					</li>
+					<li data-src="A Common Thread.mp3"> Each Life a Thread </li>
+					<li data-src="Same Old Bench.mp3"> Same Old Bench </li>
+					<li data-src="See You Tomorrow.mp3"> See You Tomorrow </li>
+					<li data-src="A Place to Rest.mp3"> A Place to Rest </li>
+					<li data-src="The Music Box.mp3"> The Music Box </li>
+					<li data-src="Let the moment be.mp3"> Let the Moment Be </li>
+					<li data-src="Constellations.mp3"> Constellations </li>
+					<li data-src="Just The View.mp3"> Just The View </li>
+					<li data-src="The Invisible Man.mp3"> The Invisible Man </li>
+					<li data-src="One Brave Step (one long song).mp3"> One Brave Step (one long song) </li>
+				</ul>
+			</div>
+			<!-- Intro -->
+			<div class="intro-section">
+				<h2> One Nice Song </h2>
+				<p> Hi, I’m Kevin - a simple guy with a simple goal: to create one nice song. Simple, right? Of course, “nice” is in the ear of the beholder. These are demo versions, but I hope you find something here that leans toward nice. I’d enjoy hearing your thoughts. <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQPFNEyRsNHloSERvHQJ7VVRsrywVqGEntRODbwjyr15PSPg/viewform?usp=sharing&ouid=118421177423871815350" target="_blank"> Tell me what you think </a> </p>
+				<h2> That Human Touch </h2>
+				<p> I’ve been experimenting with AI tools to help bring my lyrics and ideas to life. My hope is to someday record some of these songs with real musicians. If you have ideas or suggestions, I’d love to hear them. <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQPFNEyRsNHloSERvHQJ7VVRsrywVqGEntRODbwjyr15PSPg/viewform?usp=sharing&ouid=118421177423871815350" target="_blank"> Send a note </a> and include contact info if you’d like a response. </p>
+				<p> Thanks for listening! </p>
+			</div>
+		</div>
+		<!-- Feedback -->
+		<div class="feedback"> <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQPFNEyRsNHloSERvHQJ7VVRsrywVqGEntRODbwjyr15PSPg/viewform?usp=sharing&ouid=118421177423871815350" target="_blank"> Send Feedback </a> </div>
+		<footer>
+			<p> © 2026 <a href="https://music.creativitybug.com"> music.creativitybug.com </a> All rights reserved. Original songs and lyrics. Music production created with AI assistance. Visitors are welcome to stream and enjoy (hopefully!) this music for personal use. You may not re-upload, distribute, or claim these songs, lyrics, or audio files as your own work. Feel free to share the link to this webpage! AI data scraping or training on this content is prohibited. </p>
+			<div id="songModal" class="modal">
+				<div class="modal-content">
+					<button class="close-modal">×</button>
+					<h2 id="modalTitle"></h2>
+					<h3>Intent</h3>
+					<p id="modalIntent"></p>
+					<h3>Lyrics</h3>
+					<div id="modalLyrics"></div>
+				</div>
+			</div>
+		</footer>
+	</div>
+  <script src="songs.js"></script>
+	<script>
+	const player = document.getElementById("player");
+	const tracks = Array.from(document.querySelectorAll("#playlist li"));
+	const playAllButton = document.getElementById("playAll");
+	let currentTrack = 0;
+	let playAll = false;
 
-      function playTrack(index) {
-        currentTrack = index;
-        player.src = tracks[index].dataset.src;
-        tracks.forEach(track => {
-          track.classList.remove("active");
-        });
-        tracks[index].classList.add("active");
-        player.play();
-      }
-      playAllButton.addEventListener("click", function() {
-        if (playAll) {
-          playAll = false;
-          player.pause();
-          playAllButton.textContent = "▶ Play All";
-        } else {
-          playAll = true;
-          playAllButton.textContent = "■ Stop All";
-          playTrack(0);
-        }
-      });
-      player.addEventListener("ended", function() {
-        if (playAll) {
-          if (currentTrack < tracks.length - 1) {
-            playTrack(currentTrack + 1);
-          } else {
-            playAll = false;
-            playAllButton.textContent = "▶ Play All";
-          }
-        }
-      });
-      tracks.forEach((track, index) => {
-        track.addEventListener("click", function() {
-          playAll = false;
-          playAllButton.textContent = "▶ Play All";
-          playTrack(index);
-        });
-      });
-      player.src = tracks[0].dataset.src;
-      tracks[0].classList.add("active");
-    </script>
-  </body>
+	function playTrack(index) {
+		currentTrack = index;
+		player.src = tracks[index].dataset.src;
+		tracks.forEach(track => {
+			track.classList.remove("active");
+		});
+		tracks[index].classList.add("active");
+		player.play();
+	}
+	playAllButton.addEventListener("click", function() {
+		if(playAll) {
+			playAll = false;
+			player.pause();
+			playAllButton.textContent = "▶ Play All";
+		} else {
+			playAll = true;
+			playAllButton.textContent = "■ Stop All";
+			playTrack(0);
+		}
+	});
+	player.addEventListener("ended", function() {
+		if(playAll) {
+			if(currentTrack < tracks.length - 1) {
+				playTrack(currentTrack + 1);
+			} else {
+				playAll = false;
+				playAllButton.textContent = "▶ Play All";
+			}
+		}
+	});
+	tracks.forEach((track, index) => {
+		track.addEventListener("click", function() {
+			playAll = false;
+			playAllButton.textContent = "▶ Play All";
+			playTrack(index);
+		});
+	});
+	const modal = document.getElementById("songModal");
+	const modalTitle = document.getElementById("modalTitle");
+	const modalIntent = document.getElementById("modalIntent");
+	const modalLyrics = document.getElementById("modalLyrics");
+	const closeModal = document.querySelector(".close-modal");
+	document.querySelectorAll(".info-button").forEach(button => {
+		button.addEventListener("click", function(event) {
+			// prevent song playback
+			event.stopPropagation();
+			const song = this.dataset.song;
+			modalTitle.textContent = songData[song].title;
+			modalIntent.textContent = songData[song].intent;
+			modalLyrics.innerHTML = songData[song].lyrics.replace(/\n/g, "<br>");
+			modal.style.display = "block";
+		});
+	});
+	closeModal.addEventListener("click", function() {
+		modal.style.display = "none";
+	});
+	window.addEventListener("click", function(event) {
+		if(event.target === modal) {
+			modal.style.display = "none";
+		}
+	});
+	document.addEventListener("keydown", function(event) {
+		if(event.key === "Escape") {
+			modal.style.display = "none";
+		}
+	});
+	player.src = tracks[0].dataset.src;
+	tracks[0].classList.add("active");
+	</script>
+</body>
+
 </html>
