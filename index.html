@@ -231,6 +231,27 @@
 		background: none;
 		cursor: pointer;
 	}
+
+	.close-bottom {
+		  display: block;
+		  margin: 30px auto 0 auto;
+		  padding: 10px 24px;
+		
+		  background: #1E6C93;
+		  color: white;
+		
+		  border: none;
+		  border-radius: 6px;
+		
+		  font-size: 16px;
+		  font-weight: bold;
+		
+		  cursor: pointer;
+		}
+		
+		.close-bottom:hover {
+		  background: #15506d;
+		}
 	
 	.info-button {
 		  width: 28px;
@@ -255,9 +276,9 @@
 		  color: white;
 		}
 	
-	.song-title {
-		flex: 1;
-	}
+		.song-title {
+			flex: 1;
+		}
 	</style>
 </head>
 
@@ -310,6 +331,8 @@
 					<p id="modalIntent"></p>
 					<h3>Lyrics</h3>
 					<div id="modalLyrics"></div>
+					
+					<button class="close-bottom">Close</button>
 				</div>
 			</div>
 		</footer>
@@ -364,6 +387,7 @@
 	const modalIntent = document.getElementById("modalIntent");
 	const modalLyrics = document.getElementById("modalLyrics");
 	const closeModal = document.querySelector(".close-modal");
+	const closeBottom = document.querySelector(".close-bottom");
 	document.querySelectorAll(".info-button").forEach(button => {
 		button.addEventListener("click", function(event) {
 			// prevent song playback
@@ -377,6 +401,9 @@
 	});
 	closeModal.addEventListener("click", function() {
 		modal.style.display = "none";
+	});
+	closeBottom.addEventListener("click", function() {
+	  modal.style.display = "none";
 	});
 	window.addEventListener("click", function(event) {
 		if(event.target === modal) {
