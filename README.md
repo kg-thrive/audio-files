@@ -25,7 +25,7 @@ All rights reserved. The content in this repository is **not open source**.
 * **Prohibited Uses:** Re-uploading, mirroring, commercial use, and third-party monetization are strictly forbidden.
 * **No AI Scraping/Training:** Text and data mining (TDM), web scraping, and using any audio files, lyrics, or code in this repository to train or fine-tune artificial intelligence models is prohibited.
 
-For complete legal terms, please read the included [`LICENSE`](./LICENSE) file.
+For complete legal terms, please read the included [`LICENSE`](./license.txt) file.
 
 ---
 
