@@ -1,0 +1,16 @@
+COPYRIGHT & TERMS OF USE
+
+Copyright (c) 2026 music.creativitybug.com. All Rights Reserved.
+
+All original lyrics, musical compositions, audio files, and website assets in this repository are the property of the rights holder, produced with AI assistance.
+
+1. PERMITTED USE
+- Personal Listening: You may stream and listen to the audio files directly from this repository or website for personal, non-commercial enjoyment.
+
+2. RESTRICTIONS
+- No Redistribution: You may not re-upload, host, mirror, broadcast, sublicense, or redistribute these audio files, lyrics, or site materials on any other platform, server, or service.
+- No Commercial Use: You may not monetize, sell, or include any part of these works in commercial products, advertisements, podcasts, or paid media.
+- No AI Scraping & Training: Text and data mining (TDM), web scraping, automated harvesting, or using any audio files, lyrics, or text in this repository to train, fine-tune, or develop artificial intelligence models or machine learning algorithms is strictly prohibited.
+- No Claim of Ownership: You may not claim authorship or copyright ownership over any lyrics, compositions, arrangements, or audio content contained herein.
+
+All rights not expressly granted in this document are fully reserved.
