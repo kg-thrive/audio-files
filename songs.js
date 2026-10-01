@@ -1,7 +1,7 @@
 const songData = {
 	"sailing-through": {
 		title: "Sailing Through",
-		intent: `Resentment can feel like a heavy anchor, holding you down until we choose to let go. This song is about the freeing realization of ending the need for an apology or wanting the other person to feel your pain and deciding to move forward, choosing new waters instead of carrying an old weight.`,
+		intent: `Resentment can feel like a heavy anchor, holding you down until we choose to let go. It's a freeing realization to end the need for an apology or want the other person to feel the pain and deciding to move forward, choosing new waters instead of stuck carrying an old weight.`,
 		lyrics: `A promise was spoken
 A fair wind filled the sail
 Our journey started…
@@ -121,7 +121,7 @@ Each life a thread`
 	},
 	"same-old-bench": {
 		title: "Same Old Bench",
-		intent: `An old park bench is a silent witness to our everyday lives. This song is written from the perspective of a mundane, yet special place that stays perfectly still while childhood, relationships, and generations come and go.`,
+		intent: `An old park bench is a silent witness to our everyday lives. This mundane, yet special place that stays perfectly still while childhood, relationships, and generations come and go.`,
 		lyrics: `Red shoes kicking up the sand
 Monkey bars and sticky hands
 Shouting out, "Now watch me jump!"
