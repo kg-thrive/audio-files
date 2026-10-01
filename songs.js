@@ -1,7 +1,7 @@
 const songData = {
 	"sailing-through": {
 		title: "Sailing Through",
-		intent: `Carrying a grudge is exhausting, and it’s difficult to figure out how to let it go. This track came out of that exact frustration - the exhausting cycle of holding onto resentment because you want your pain to be acknowledged. It’s about that incredibly difficult moment when you can finally stop waiting for an apology or for them to feel the pain, and choose to cut the anchor loose. Moving forward doesn't mean forgetting; it just means refusing to let an old burden dictate where you sail next. `,
+		intent: `Resentment can feel like a heavy anchor, holding you down until we choose to let go. This song is about the freeing realization of ending the need for an apology or wanting the other person to feel your pain and deciding to move forward, choosing new waters instead of carrying an old weight.`,
 		lyrics: `A promise was spoken
 A fair wind filled the sail
 Our journey started…
@@ -63,7 +63,7 @@ And I am sailing through`
 	},
 	"each-life-a-thread": {
 		title: "Each Life a Thread",
-		intent: `Have you ever wondered about all the people who used to walk the same streets decades before you? They had their own quiet mornings, heavy choices, and ordinary days that nobody ever wrote down in a history book. It made me realize how much we owe to the nameless lives that came before us. This song is just a small, quiet acknowledgment of that. We don't need to be famous to matter - we’re all just weaving our own small piece into a massive story, helping create the path for whoever comes next. `,
+		intent: `There are many lives that came before us that contributed to us being where and who we are today. We’re all just weaving our own small piece into a massive story, helping create the scene for whoever comes next. `,
 		lyrics: `Walking down these hometown streets
 Past the church and the old town hall
 Past the porches and the windows
@@ -121,8 +121,7 @@ Each life a thread`
 	},
 	"same-old-bench": {
 		title: "Same Old Bench",
-		intent: `This track came from watching the world pass by an old bench and realizing what a beautiful, silent witness it is to our everyday lives. This song is written from the perspective of a place that stays perfectly still while childhood memories, relationships, and whole families come and go. It’s a humble acknowledgment of how our personal histories get anchored to mundane things. I hope it brings to mind a special, quiet spot from your own story when you hear it. 
-`,
+		intent: `An old park bench is a silent witness to our everyday lives. This song is written from the perspective of a mundane, yet special place that stays perfectly still while childhood memories, relationships, and generations come and go.`,
 		lyrics: `Red shoes kicking up the sand
 Monkey bars and sticky hands
 Shouting out, "Now watch me jump!"
@@ -221,7 +220,7 @@ Just another day`
 	},
 	"a-place-to-rest": {
 		title: "A Place to Rest",
-		intent: `This song came out of a habit of spending time among old headstones in the local cemetery. There’s a strange freedom in a cemetery; it’s timeless, yet always changing. The song weaves together the contrast of a place dedicated to the past that is still so clearly alive with blooming flowers, bird songs, and shifting seasons. Finding quiet and peace isn't just a final destination - it’s something we desperately need while we’re still walking around. `,
+		intent: `This song came out of a habit of spending time among old headstones in the local cemetery. The song weaves together the contrast of a place dedicated to the past that is still so clearly alive with blooming flowers, bird songs, and shifting seasons. Finding quiet and peace isn't just a final destination - it’s something we desperately need while we’re still walking around. `,
 		lyrics: `A narrow road curves through the trees
 Past weathered stones and birch leaves
 Names and dates beneath the sky
@@ -276,7 +275,7 @@ And the narrow road fades out into the night`
 	},
 	"the-music-box": {
 		title: "The Music Box",
-		intent: `A song can take months of moving words around, rewriting melodies, and chasing small ideas in the dark. But even after all that work, it just sits quietly on a hard drive, waiting for someone to actually listen. It’s much like a physical music box trapped on a shelf - wound up and full of music, but totally silent until someone decides to open the lid. This track is my way of opening the door to all those quiet, hidden pieces and finally letting them out into the world.`,
+		intent: `A song can take months of moving words around, rewriting melodies, and chasing small ideas in the dark. But even after all that work, it just sits quietly on a hard drive, waiting for someone to actually listen. It’s much like a physical music box trapped on a shelf - wound up and full of music, but totally silent until someone decides to open the lid.`,
 		lyrics: `A little tune began to grow,
 A quiet spark, a seed,
 A few words, a simple thought,
@@ -339,7 +338,7 @@ The song fills the air.`
 	},
 	"let-the-moment-be": {
 		title: "Let the Moment Be",
-		intent: `This  song is an invitation to pause, and step back from expectations. Life isn't about controlling the road, but staying open, finding lightness, and trusting the process - one breath at a time. `,
+		intent: `An invitation to pause, and let go of expectations. Life isn't about controlling the road, but staying open, letting go of expectations, and trusting the process - one breath at a time. `,
 		lyrics: `This body is a gift, your mothership,
 A sacred vessel on a lifetime trip.
 In every moment, let it be your guide,
@@ -399,7 +398,7 @@ Let the moment be what life's about`
 	},
 	"constellations": {
 		title: "Constellations",
-		intent: `This track is a look at how a hopeful heart can easily trick itself. This song attempts to capture those moments when we connect the dots between scattered interactions, building up patterns and possibilities that feel incredibly real just because we want them to be. Like actual constellations, the beauty is in the lines we choose to draw, even if the stars are completely unrelated. Writing this was my way of looking at that fragile space between what we imagine and what actually is, and learning when it's time to gently pull myself back down to earth. `,
+		intent: `The hopeful heart can easily trick itself. This song captures those moments when we connect the dots between scattered interactions, building up patterns and possibilities that feel incredibly real just because we want them to be. Like actual constellations, the beauty is in the lines we choose to draw, even if the stars are completely unrelated. There's a space between what we imagine and what actually is, and it's difficult to see when it's time to pull yourself back down to earth. `,
 		lyrics: `A passing spark
 Given room to grow
 Quiet futures start to form
@@ -457,7 +456,7 @@ Someday`
 	},
 	"just-the-view": {
 		title: "Just the View",
-		intent: `“Just the View” came from the realization that peace is often not something to find, but something that is already present. The song explores the walls created by worry, expectations, and endless thoughts, and the quiet moment that remains when those walls begin to fall away. Sometimes nothing needs to be fixed or achieved - the simple act of seeing what is already here is enough. `,
+		intent: `Peace is often not something to find, but something that is already present. When the walls created by worry, expectations, and endless thoughts fall away, peace remains. Nothing needs to be fixed, changed, or achieved - peace is already here. `,
 		lyrics: `The world was never the enemy,
 Just a fight with the story that claimed to be.
 Built a whole prison outta "what if" walls,
@@ -515,7 +514,7 @@ No effort. Just the view.`
 	},
 	"the-invisible-man": {
 		title: "The Invisible Man",
-		intent: `It is incredibly easy to feel completely invisible in a crowded room, and I think a lot of us carry that heavy, quiet doubt of wondering if anyone actually notices we’re here. This song tells a story about one person finally being noticed, because I’ve learned how much a tiny, ordinary gesture - just a quick hello, a real question, or a second of genuine eye contact - can completely change someone's day. This song is my way of leaning into that simple human hope we all share: the need to know that we matter, and that someone sees us standing here.`,
+		intent: `It is incredibly easy to feel completely invisible in a crowded room, and a lot of us carry that heavy, quiet doubt of wondering if anyone actually notices we’re here. This song tells a story about one person finally being noticed. A tiny, ordinary gesture - just a quick hello, a real question, or a second of genuine eye contact - can completely change someone's day. There's a simple human hope we all share: the need to know that we matter, and that someone sees us.`,
 		lyrics: `Some folks light up a room
 This guy disappears too soon
 People look straight through his face
@@ -563,7 +562,7 @@ Invisible man`
 	},
 	"one-brave-step": {
 		title: "One Brave Step",
-		intent: `This track is a nod to the exhausting battle of waiting until you feel "ready" or "fearless" to make a move. This song is a sonic journey around a traveler facing a gatekeeper at the border of comfort, representing all those loud inner voices telling us to turn back. Growth and freedom don't require absolute certainty; they just require the willingness to keep walking. It's a look at how one small, trembling step forward can completely shrink the obstacles ahead.`,
+		intent: `The journey around a traveler facing a gatekeeper at the border of comfort, representing the loud inner voice telling us to turn back. Growth and freedom don't require absolute certainty; they just require the willingness to keep walking. One small, brave step forward can shrink the obstacles ahead.`,
 		lyrics: `Cold dawn breaking, a dreamer woke,
 To distant peaks, a vow was spoke.
 A faded coat, a nameless road,
