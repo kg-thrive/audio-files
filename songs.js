@@ -1,7 +1,7 @@
 const songData = {
 	"sailing-through": {
 		title: "Sailing Through",
-		intent: `Resentment can feel like a heavy anchor; it'll hold you down. It's a freeing realization to end the need for an apology or want the other person to feel the pain, and decide to move forward, choosing new waters instead of being stuck carrying an old weight. Dwelling on past injustices one misses the opportunity of today. Don't let one bad event continue to hold you back.`,
+		intent: `Resentment can feel like a heavy anchor; it'll hold you down. It's a freeing realization to end the need for an apology or want the other person to feel the pain, and decide to move forward instead. Dwelling on past injustices, one misses the opportunity of today. Don't let one bad event hold you back.`,
 		lyrics: `A promise was spoken
 A fair wind filled the sail
 Our journey started…
@@ -338,7 +338,7 @@ The song fills the air.`
 	},
 	"let-the-moment-be": {
 		title: "Let the Moment Be",
-		intent: `The path to peace is not to pursue certainty but to relax into uncertainty. To surrender to the ebbs and flows of life and accept things as they are instead of how they “should” be. Life isn't about controlling the road, but staying open, letting go of expectations, and trusting the process. One breath at a time. `,
+		intent: `Surrender to the ebbs and flows of life and accept things as they are instead of how they “should” be. Life isn't about controlling the road, but staying open, letting go of expectations, and trusting the process, one breath at a time. `,
 		lyrics: `This body is a gift, your mothership,
 A sacred vessel on a lifetime trip.
 In every moment, let it be your guide,
@@ -398,7 +398,7 @@ Let the moment be what life's about`
 	},
 	"constellations": {
 		title: "Constellations",
-		intent: `The hopeful heart can easily trick itself. Our imagination can connect the dots between scattered interactions, building up patterns and possibilities that feel incredibly real just because we want them to be. Like actual constellations, the beauty is in the lines we choose to draw, even if the stars are completely unrelated. There's a space between what we imagine and what actually is. The mind creates constellations, but it's important to realize when it's time to come back down to earth. `,
+		intent: `The hopeful heart will easily trick itself. Our imagination is powerful. It creatively connects the dots between scattered interactions, building up patterns and possibilities that feel incredibly real. Like actual constellations, the beauty is in the lines we choose to draw, even if the stars are completely unrelated. There's a space between what we imagine and what actually is. The mind creates constellations, but the heart needs to realize when it's time to come back down to earth. `,
 		lyrics: `A passing spark
 Given room to grow
 Quiet futures start to form
@@ -456,7 +456,7 @@ Someday`
 	},
 	"just-the-view": {
 		title: "Just the View",
-		intent: `Peace is often not something to find, but something that is already present. When the walls created by worry, expectations, and endless thoughts fall away, peace remains. Nothing needs to be fixed, changed, or achieved. Peace is always available; it cannot be lost, only forgotten. It is the eye of the hurricane.`,
+		intent: `Peace is not something to find, it's already present. When the walls created by worry, expectations, and endless thoughts fall away, peace remains. Nothing needs to be fixed, changed, or achieved. Peace is always available; it cannot be lost, only forgotten. It is the eye of the hurricane.`,
 		lyrics: `The world was never the enemy,
 Just a fight with the story that claimed to be.
 Built a whole prison outta "what if" walls,
@@ -514,7 +514,7 @@ No effort. Just the view.`
 	},
 	"the-invisible-man": {
 		title: "The Invisible Man",
-		intent: `It is incredibly easy to feel completely invisible in a crowded room, and a lot of us carry that heavy, quiet doubt of wondering if anyone actually notices we’re here. This is a story about one person finally being noticed. A tiny, ordinary gesture - just a quick hello, a real question, or a second of genuine eye contact - can completely change someone's day. There's a simple human hope we all share: the need to know that someone sees us - that we matter.`,
+		intent: `It is incredibly easy to feel completely invisible in a crowded room. A tiny, ordinary gesture - just a quick hello, a question, or a second of genuine eye contact - can completely change someone's day. There's a simple human hope we all share: the need to know that someone sees us - that we matter.`,
 		lyrics: `Some folks light up a room
 This guy disappears too soon
 People look straight through his face
@@ -562,7 +562,7 @@ Invisible man`
 	},
 	"one-brave-step": {
 		title: "One Brave Step",
-		intent: `The journey around a traveler facing a gatekeeper at the border of comfort, representing the loud inner voice telling us to turn back. Growth and freedom don't require certainty; they just require the willingness to keep walking. Take one brave step forward. You'll always be okay. Always.`,
+		intent: `We all face that the loud inner voice telling us to turn back, stay safe and be certain all will be okay. But, growth and freedom don't require certainty; they just require the willingness to keep walking. Take one brave step forward. You'll always be okay. Always.`,
 		lyrics: `Cold dawn breaking, a dreamer woke,
 To distant peaks, a vow was spoke.
 A faded coat, a nameless road,
