@@ -1,7 +1,7 @@
 const songData = {
 	"sailing-through": {
 		title: "Sailing Through",
-		intent: `Resentment can feel like a heavy anchor, holding you down until we choose to let go. It's a freeing realization to end the need for an apology or want the other person to feel the pain and deciding to move forward, choosing new waters instead of stuck carrying an old weight.`,
+		intent: `Resentment can feel like a heavy anchor; it'll hold you down. It's a freeing realization to end the need for an apology or want the other person to feel the pain, and decide to move forward, choosing new waters instead of being stuck carrying an old weight. Dwelling on past injustices one misses the opportunity of today. Don't let one bad event continue to hold you back.`,
 		lyrics: `A promise was spoken
 A fair wind filled the sail
 Our journey started…
@@ -121,7 +121,7 @@ Each life a thread`
 	},
 	"same-old-bench": {
 		title: "Same Old Bench",
-		intent: `An old park bench is a silent witness to our everyday lives. This mundane, yet special place that stays perfectly still while childhood, relationships, and generations come and go.`,
+		intent: `An old park bench is a silent witness to our everyday lives. This mundane, yet special place stays perfectly still while childhood, relationships, and generations come and go.`,
 		lyrics: `Red shoes kicking up the sand
 Monkey bars and sticky hands
 Shouting out, "Now watch me jump!"
@@ -171,7 +171,7 @@ Now watch me jump`
 	},
 	"see-you-tomorrow": {
 		title: "See You Tomorrow",
-		intent: `The last time we see someone or say goodbye rarely announces itself. It usually just sounds like a simple, "See you tomorrow." There is beauty and the slight heartbreak hidden inside our normal routines. Hold onto the small stuff, because we never truly know which everyday moments are the ones that will matter most later on. 
+		intent: `The last time we see someone or say goodbye rarely announces itself. It usually just sounds like a simple, "See you tomorrow." There is beauty and the slight heartbreak hidden inside our normal routines. Appreciate the small stuff, because we never truly know which everyday moments are the ones that will matter most later on. 
 `,
 		lyrics: `“I should probably let you go”
 “Yeah, we should say goodbye”
@@ -220,7 +220,7 @@ Just another day`
 	},
 	"a-place-to-rest": {
 		title: "A Place to Rest",
-		intent: `The cemetery weaves together the contrast of a place dedicated to the past that is still so clearly alive with blooming flowers, bird songs, and shifting seasons. Finding quiet and peace isn't just a final destination - it’s something we desperately need while we’re still walking around. `,
+		intent: `The cemetery weaves together the contrast of a place dedicated to the past that is still so clearly alive with blooming flowers, bird songs, and shifting seasons. Resting in peace isn't just a final destination - it’s something we need while we’re still walking around. `,
 		lyrics: `A narrow road curves through the trees
 Past weathered stones and birch leaves
 Names and dates beneath the sky
@@ -338,7 +338,7 @@ The song fills the air.`
 	},
 	"let-the-moment-be": {
 		title: "Let the Moment Be",
-		intent: `Life isn't about controlling the road, but staying open, letting go of expectations, and trusting the process - one breath at a time. `,
+		intent: `The path to peace is not to pursue certainty but to relax into uncertainty. To surrender to the ebbs and flows of life and accept things as they are instead of how they “should” be. Life isn't about controlling the road, but staying open, letting go of expectations, and trusting the process. One breath at a time. `,
 		lyrics: `This body is a gift, your mothership,
 A sacred vessel on a lifetime trip.
 In every moment, let it be your guide,
@@ -398,7 +398,7 @@ Let the moment be what life's about`
 	},
 	"constellations": {
 		title: "Constellations",
-		intent: `The hopeful heart can easily trick itself. Our imagination can connect the dots between scattered interactions, building up patterns and possibilities that feel incredibly real just because we want them to be. Like actual constellations, the beauty is in the lines we choose to draw, even if the stars are completely unrelated. There's a space between what we imagine and what actually is, and it's difficult to see when it's time to come back down to earth. `,
+		intent: `The hopeful heart can easily trick itself. Our imagination can connect the dots between scattered interactions, building up patterns and possibilities that feel incredibly real just because we want them to be. Like actual constellations, the beauty is in the lines we choose to draw, even if the stars are completely unrelated. There's a space between what we imagine and what actually is. The mind creates constellations, but it's important to realize when it's time to come back down to earth. `,
 		lyrics: `A passing spark
 Given room to grow
 Quiet futures start to form
@@ -456,7 +456,7 @@ Someday`
 	},
 	"just-the-view": {
 		title: "Just the View",
-		intent: `Peace is often not something to find, but something that is already present. When the walls created by worry, expectations, and endless thoughts fall away, peace remains. Nothing needs to be fixed, changed, or achieved. `,
+		intent: `Peace is often not something to find, but something that is already present. When the walls created by worry, expectations, and endless thoughts fall away, peace remains. Nothing needs to be fixed, changed, or achieved. Peace is always available; it cannot be lost, only forgotten. It is the eye of the hurricane.`,
 		lyrics: `The world was never the enemy,
 Just a fight with the story that claimed to be.
 Built a whole prison outta "what if" walls,
@@ -562,7 +562,7 @@ Invisible man`
 	},
 	"one-brave-step": {
 		title: "One Brave Step",
-		intent: `The journey around a traveler facing a gatekeeper at the border of comfort, representing the loud inner voice telling us to turn back. Growth and freedom don't require certainty; they just require the willingness to keep walking - one brave step forward.`,
+		intent: `The journey around a traveler facing a gatekeeper at the border of comfort, representing the loud inner voice telling us to turn back. Growth and freedom don't require certainty; they just require the willingness to keep walking. Take one brave step forward. You'll always be okay. Always.`,
 		lyrics: `Cold dawn breaking, a dreamer woke,
 To distant peaks, a vow was spoke.
 A faded coat, a nameless road,
