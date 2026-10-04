@@ -63,7 +63,7 @@ And I am sailing through`
 	},
 	"each-life-a-thread": {
 		title: "Each Life a Thread",
-		intent: `So many people lived their ordinary lives before us. Thwy never knew what would come of the little choices they made, but somehow those lives became part of ours. We’re doing much the same thing now, adding our own small piece to a story that started long before us and will keep going after we're gone.`,
+		intent: `So many people lived their ordinary lives before us. They never knew what would come of the little choices they made, but somehow those lives became part of ours. We’re doing much the same thing now, adding our own small piece to a story that started long before us and will keep going after we're gone.`,
 		lyrics: `Walking down these hometown streets
 Past the church and the old town hall
 Past the porches and the windows
@@ -274,7 +274,7 @@ And the narrow road fades out into the night`
 	},
 	"the-music-box": {
 		title: "The Music Box",
-		intent: `A song can take a long time to put together - moving words around, arranging melodies, and fussing over little pieces until they finally seem to fit. And then, when it's finished, it can just sit quietly on a hard drive. A little like a music box that's been wound up but never opened. All that went into it is still there, waiting for somebody to lift the lid and let the music out.`,
+		intent: `A song can take a long time to put together - moving words around, arranging melodies, and fussing over little pieces until they finally seem to fit. And then, when it's finished, it can just sit quietly on a hard drive. It's a little like a music box that's been wound up but never opened. All that went into it is still there, waiting for somebody to lift the lid and let the music out.`,
 		lyrics: `A little tune began to grow,
 A quiet spark, a seed,
 A few words, a simple thought,
@@ -513,7 +513,7 @@ No effort. Just the view.`
 	},
 	"the-invisible-man": {
 		title: "The Invisible Man",
-		intent: ``,
+		intent: `It can be surprisingly easy to feel invisible, even when surrounded by people. Sometimes it doesn't take much to change that - a hello, a question, a smile, or just taking a moment to actually look at someone. A small bit of attention is enough to remind someone that they matter and haven't disappeared after all.`,
 		lyrics: `Some folks light up a room
 This guy disappears too soon
 People look straight through his face
