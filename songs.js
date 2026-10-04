@@ -1,7 +1,7 @@
 const songData = {
 	"sailing-through": {
 		title: "Sailing Through",
-		intent: `Resentment can feel like a heavy anchor; it'll hold you down. It's a freeing realization to end the need for an apology or want the other person to feel the pain, and decide to move forward instead. Dwelling on past injustices, one misses the opportunity of today. Don't let one bad event hold you back.`,
+		intent: `Resentment can feel like a heavy anchor, keeping us tied to something that already happened. Sometimes there comes a point where waiting for an apology - or wanting someone else to feel the pain we felt - only keeps us stuck. Letting go doesn't make the past right or change what happened. It just leaves a little more room to turn around, catch the breeze, and see what might be ahead.`,
 		lyrics: `A promise was spoken
 A fair wind filled the sail
 Our journey started…
@@ -63,7 +63,7 @@ And I am sailing through`
 	},
 	"each-life-a-thread": {
 		title: "Each Life a Thread",
-		intent: `There are many lives that came before us that contributed to us being where and who we are today. We’re all just weaving our own small piece into a massive story, helping create the scene for whoever comes next. `,
+		intent: `So many people lived their ordinary lives before us. Thwy never knew what would come of the little choices they made, but somehow those lives became part of ours. We’re doing much the same thing now, adding our own small piece to a story that started long before us and will keep going after we're gone.`,
 		lyrics: `Walking down these hometown streets
 Past the church and the old town hall
 Past the porches and the windows
@@ -121,7 +121,7 @@ Each life a thread`
 	},
 	"same-old-bench": {
 		title: "Same Old Bench",
-		intent: `An old park bench is a silent witness to our everyday lives. This mundane, yet special place stays perfectly still while childhood, relationships, and generations come and go.`,
+		intent: `An old park bench gets to see a lot without ever going anywhere. Kids grow up, people fall in love, and eventually those same kids bring their own children to the park. The bench just sits there through it all, looking pretty much the same while everything around it keeps changing.`,
 		lyrics: `Red shoes kicking up the sand
 Monkey bars and sticky hands
 Shouting out, "Now watch me jump!"
@@ -171,8 +171,7 @@ Now watch me jump`
 	},
 	"see-you-tomorrow": {
 		title: "See You Tomorrow",
-		intent: `The last time we see someone or say goodbye rarely announces itself. It usually just sounds like a simple, "See you tomorrow." There is beauty and the slight heartbreak hidden inside our normal routines. Appreciate the small stuff, because we never truly know which everyday moments are the ones that will matter most later on. 
-`,
+		intent: `The last time we see someone or say goodbye usually doesn't feel like a last time. It's more likely to sound like, “See you tomorrow,” and then life goes on. There’s something a little beautiful and a little sad about that. So much of life is made up of ordinary moments that don't seem important until we look back and realize we won't get them again.`,
 		lyrics: `“I should probably let you go”
 “Yeah, we should say goodbye”
 Then neither one hangs up
@@ -220,7 +219,7 @@ Just another day`
 	},
 	"a-place-to-rest": {
 		title: "A Place to Rest",
-		intent: `The cemetery weaves together the contrast of a place dedicated to the past that is still so clearly alive with blooming flowers, bird songs, and shifting seasons. Resting in peace isn't just a final destination - it’s something we need while we’re still walking around. `,
+		intent: `There’s something peaceful about a cemetery. It’s a place filled with reminders of people who are gone, but there are still birds singing, flowers blooming, trees changing with the seasons, and sunlight moving across the ground. Maybe a place meant for remembering can also remind those of us still here that it's okay to stop for a while, breathe, and rest.`,
 		lyrics: `A narrow road curves through the trees
 Past weathered stones and birch leaves
 Names and dates beneath the sky
@@ -275,7 +274,7 @@ And the narrow road fades out into the night`
 	},
 	"the-music-box": {
 		title: "The Music Box",
-		intent: `A song can take months of moving words around, arranging melodies, and chasing small ideas. But even after all that work, it just sits quietly on a hard drive, waiting for someone to actually listen. It’s much like a physical music box - wound up and full of music, but totally silent until someone decides to open the lid.`,
+		intent: `A song can take a long time to put together - moving words around, arranging melodies, and fussing over little pieces until they finally seem to fit. And then, when it's finished, it can just sit quietly on a hard drive. A little like a music box that's been wound up but never opened. All that went into it is still there, waiting for somebody to lift the lid and let the music out.`,
 		lyrics: `A little tune began to grow,
 A quiet spark, a seed,
 A few words, a simple thought,
@@ -338,7 +337,7 @@ The song fills the air.`
 	},
 	"let-the-moment-be": {
 		title: "Let the Moment Be",
-		intent: `Surrender to the ebbs and flows of life and accept things as they are instead of how they “should” be. Life isn't about controlling the road, but staying open, letting go of expectations, and trusting the process, one breath at a time. `,
+		intent: `Life doesn't always go the way we think it should. Sometimes the best thing we can do is stop fighting with that, take a breath, and see what is actually happening right now. There will be bumps along the way, and plenty of things we can't control. Maybe it helps to stay open, let go of some expectations, and take things one breath at a time.`,
 		lyrics: `This body is a gift, your mothership,
 A sacred vessel on a lifetime trip.
 In every moment, let it be your guide,
@@ -398,7 +397,7 @@ Let the moment be what life's about`
 	},
 	"constellations": {
 		title: "Constellations",
-		intent: `The hopeful heart will easily trick itself. Our imagination is powerful. It creatively connects the dots between scattered interactions, building up patterns and possibilities that feel incredibly real. Like actual constellations, the beauty is in the lines we choose to draw, even if the stars are completely unrelated. There's a space between what we imagine and what actually is. The mind creates constellations, but the heart needs to realize when it's time to come back down to earth. `,
+		intent: `It’s easy to take a small moment - a look, a conversation, a little bit of attention - and start imagining where it might lead. Before long, a handful of unrelated things can start looking like a pattern. That's part of what makes hope so nice, but it can also make it hard to see what’s really there. Sometimes the stars are just stars, and the lines connecting them are ones we drew ourselves.`,
 		lyrics: `A passing spark
 Given room to grow
 Quiet futures start to form
@@ -456,7 +455,7 @@ Someday`
 	},
 	"just-the-view": {
 		title: "Just the View",
-		intent: `Peace is not something to find, it's already present. When the walls created by worry, expectations, and endless thoughts fall away, peace remains. Nothing needs to be fixed, changed, or achieved. Peace is always available; it cannot be lost, only forgotten. It is the eye of the hurricane.`,
+		intent: `Sometimes peace seems like something that's waiting somewhere ahead - a little more money, fewer problems, a different set of circumstances. But there are moments when all that noise quiets down for a bit and nothing seems to need fixing. The thoughts and worries are still capable of coming back, but maybe they don't have to be chased or solved. Sometimes there’s nothing more to do than stop for a minute and notice what’s already here.`,
 		lyrics: `The world was never the enemy,
 Just a fight with the story that claimed to be.
 Built a whole prison outta "what if" walls,
@@ -514,7 +513,7 @@ No effort. Just the view.`
 	},
 	"the-invisible-man": {
 		title: "The Invisible Man",
-		intent: `It is incredibly easy to feel completely invisible in a crowded room. A tiny, ordinary gesture - just a quick hello, a question, or a second of genuine eye contact - can completely change someone's day. There's a simple human hope we all share: the need to know that someone sees us - that we matter.`,
+		intent: ``,
 		lyrics: `Some folks light up a room
 This guy disappears too soon
 People look straight through his face
@@ -562,7 +561,7 @@ Invisible man`
 	},
 	"one-brave-step": {
 		title: "One Brave Step",
-		intent: `We all face that the loud inner voice telling us to turn back, stay safe and be certain all will be okay. But, growth and freedom don't require certainty; they just require the willingness to keep walking. Take one brave step forward. You'll always be okay. Always.`,
+		intent: `That voice telling us to be careful, turn back, and wait until we're sure can be pretty convincing. But waiting until there’s no fear or uncertainty might mean waiting forever. Maybe courage doesn't have to be anything dramatic. Sometimes it’s just noticing that voice, taking one small step anyway, and finding out that the thing we were afraid of wasn't quite as big as it looked from a distance.`,
 		lyrics: `Cold dawn breaking, a dreamer woke,
 To distant peaks, a vow was spoke.
 A faded coat, a nameless road,
